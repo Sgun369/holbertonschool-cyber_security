@@ -1,2 +1,2 @@
 #!/bin/bash
-ps aux | awk '$6 > 0 && $7 > 0 {print $0}'
+ps aux | grep -v grep | awk '$6 > 0 && $7 > 0 {print $0}'
