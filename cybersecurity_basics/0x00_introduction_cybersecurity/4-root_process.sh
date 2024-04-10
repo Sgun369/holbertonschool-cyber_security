@@ -1,2 +1,2 @@
 #!/bin/bash
-ps -U "$1" -o pid,user,%mem,%cpu,vsz,rss --no-headers | awk '$5 > 0 && 6 > 0 {print $0}' 
+ps aux | awk '$6 > 0 && $7 > 0 {print $0}'
