@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -e "$1" ] && sha256sum -c --status <(echo "$2 $1") && echo "$1: ok" || echo "invalid"
+echo "$1: $(sha256sum -c <<< "$2 $1" | cut -d: -f2)"
