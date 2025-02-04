@@ -3,7 +3,7 @@ require 'net/http'
 require 'json'
 require 'uri'
 
-def get_response(url)
+def get_request(url)
   uri = URI(url)
   reponse = Net::HTTP.get_response(uri)
 
